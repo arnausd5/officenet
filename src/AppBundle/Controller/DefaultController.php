@@ -14,18 +14,9 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
+        return $this->render('../../../src/AppBundle/Resources/views/default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ]);
     }
-    /**
-     * @Route("/calendar", name="calendar")
-     */
-    public function calendarAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('default/calendar.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-        ]);
-    }
+
 }
