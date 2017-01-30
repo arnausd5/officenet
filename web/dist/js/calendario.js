@@ -16,7 +16,6 @@ $(function () {
 
 
         
-
         // make the event draggable using jQuery UI
         $(this).draggable({
           zIndex: 1070,
@@ -149,17 +148,19 @@ $(function () {
       var event = $("<div />");
       event.css({"background-color": currColor, "border-color": currColor, "color": "#fff"}).addClass("external-event");
       event.html(val);
+
       $('#external-events').prepend(event);
 
       //Add draggable funtionality
       ini_events(event);
 
+
       //Remove event from text input
       $("#new-event").val("");
     });
 
-    //Añadimos data para mostrar/ocultar el modal
-    $(".fc-content").attr('data-toggle', 'modal');    
-    $(".fc-content").attr('data-target', '#myModal');
+        //Añadimos data para mostrar/ocultar el modal
+        $(".fc-content").attr('data-toggle', 'modal');    
+        $(".fc-content").attr('data-target', '#myModal');
   });
 
